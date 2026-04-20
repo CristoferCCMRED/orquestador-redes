@@ -1,0 +1,4 @@
+ip,marca,usuario
+192.168.10.1,cisco_ios,admin
+192.168.20.1,huawei,admin
+192.168.30.1,fortinet,admin
