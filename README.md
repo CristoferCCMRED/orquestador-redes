@@ -28,6 +28,70 @@ Para asegurar la red, implementamos un ciclo de vida continuo:
 4. **Desplegar**: El script de Python inyecta los comandos en la red.
 5. **Verificar**: Se realiza un Troubleshooting automático para confirmar el estado final de las interfaces.
 
+# Orquestador de Red Multimarca (Cisco, Huawei, Fortinet)
+
+Este proyecto transforma la gestión manual de dispositivos en un flujo de trabajo de Infraestructura como Código (IaC). Utiliza un repositorio centralizado en GitHub como la Fuente Única de Verdad (source of truth) para garantizar la trazabilidad y reversión instantánea de configuraciones en toda la red empresarial.
+
+## 🚀 Descarga e Instalación
+
+### Requisitos Previos (Todos los Sitemas)
+1. **Python 3.x**: Descargable desde [python.org](https://www.python.org/).
+2. **Git**: Instalado en su sistema para clonar el repositorio.
+
+---
+
+### 🪟 Windows (PowerShell / CMD)
+1. **Descargar el proyecto**:
+   ```cmd
+   git clone [https://github.com/CristoferCCMRED/orquestador-redes.git](https://github.com/CristoferCCMRED/orquestador-redes.git)
+   cd orquestador-redes
+
+   Instalar dependencias:
+
+DOS
+pip install netmiko
+🐧 Linux (Ubuntu/Debian)
+Instalar herramientas base:
+
+Bash
+sudo apt update
+sudo apt install git python3 python3-pip -y
+Descargar el proyecto:
+
+Bash
+git clone [https://github.com/CristoferCCMRED/orquestador-redes.git](https://github.com/CristoferCCMRED/orquestador-redes.git)
+cd orquestador-redes
+Instalar dependencias:
+
+Bash
+pip3 install netmiko
+🍎 macOS
+Descargar el proyecto:
+
+Bash
+git clone [https://github.com/CristoferCCMRED/orquestador-redes.git](https://github.com/CristoferCCMRED/orquestador-redes.git)
+cd orquestador-redes
+Instalar dependencias:
+
+Bash
+pip3 install netmiko
+🛠️ Ejecución Paso a Paso
+Una vez instalado, siga estos pasos para ejecutar el orquestador:
+
+Configurar Inventario: Edite el archivo equipos.csv con las IPs y credenciales de su laboratorio.
+
+Preparar Scripts: Asegúrese de que los archivos en la carpeta /scripts contengan los comandos deseados.
+
+Lanzar el Orquestador:
+
+En Windows: python main.py
+
+En Linux/Mac: python3 main.py
+
+Autenticación: El sistema solicitará la contraseña de los equipos por seguridad (no se mostrará al escribir).
+
+Verificación: Al finalizar, revise los archivos log_evidencia_IP.txt generados en la carpeta raíz para confirmar los cambios.
+
 ---
 **Ingeniero a cargo:** Cristofer Buitrago Cocoma
 **Institución:** Ucompensar
